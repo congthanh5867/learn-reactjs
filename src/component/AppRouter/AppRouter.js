@@ -3,6 +3,7 @@ import { Route,Switch } from "react-router-dom";
 import Products from '../Products/Products';
 import Home from '../Home/Home';
 import Detail from '../Detail/Detail';
+// import addProducts from '../Products/addProducts';
 // import Contact from '../Contact/Contact';
 
 // import AppManaUser from '../AppManaUser/AppManaUser';
@@ -16,6 +17,7 @@ export default class AppRouter extends Component {
                     <Route exact path="/Home" component={Home} />
                     <Route path="/san-pham" component={Products} />
                     <Route path="/chi-tiet/:id" component={Detail} />
+                    {/* <Route path="/san-pham/add" component={addProducts} /> */}
                     {/* <Route path="/contact" component={Contact} />
                    
                     <Route path="/manaUser" component={AppManaUser} />

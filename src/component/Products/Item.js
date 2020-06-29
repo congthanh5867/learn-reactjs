@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
+
+const divStyle = {
+    margin: '10px',
+    // border: '5px solid pink'
+};
+
 export default class Item extends Component {
 
     format_curency = (price) => {
@@ -37,19 +43,24 @@ export default class Item extends Component {
 
 
     render() {
-      
+
         return (
-            <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                    <img src="https://via.placeholder.com/300x250" alt="" />
-                    <div className="caption">
-                        <h3>{this.props.children}</h3>
-                        <p>Gia goc: {this.format_curency(this.props.data.unit_price)} VND</p>
-                        <p>Khuyen mai :{this.format_curency(this.props.data.promotion_price)} VND</p>
-                        <p>
-                            <Link to=" " className="btn btn-primary" role="button">Mua</Link>
-                            <Link to={"chi-tiet/" + this.props.id } className="btn btn-default">Chi tiet</Link>
-                        </p>
+            <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                <div className="row">
+                    <div style={divStyle}>
+                        <div className="thumbnail">
+                            <img src="https://via.placeholder.com/250x200" alt="" />
+                            <div className="caption">
+                                <h3>{this.props.children}</h3>
+                                <p>Gia goc: {this.format_curency(this.props.data.unit_price)} VND</p>
+                                <p>Khuyen mai :{this.format_curency(this.props.data.promotion_price)} VND</p>
+                                <p>
+                                    <Link to=" " className="btn btn-primary" role="button">Mua</Link>
+                                    <Link to={"chi-tiet/" + this.props.id} className="btn btn-default">Chi tiet</Link>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="clearfix"></div>
                     </div>
                 </div>
             </div>
